@@ -59,21 +59,9 @@ services:
         environmentVariables:
           # iku_EMAIL: ${env.iku_EMAIL}
       triggers:
-        - name: sbr
+        - name: yuyun
           type: timer
           config:    
-            payload: 'sbr'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 7,12 * * *'
-            enable: false
-        - name: History
-          type: timer
-          config:    
-            payload: 'History'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 9 * * *'
-            enable: false
-        - name: wechat
-          type: timer
-          config:    
-            payload: 'wechat'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 45 8 ? * MON-FRI'
+            payload: 'yuyun'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 7 * * *'
             enable: false
