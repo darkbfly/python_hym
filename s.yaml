@@ -70,10 +70,10 @@ services:
           config:    
             payload: 'History'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0 9 * * *'
-            enable: true
+            enable: false
         - name: wechat
           type: timer
           config:    
             payload: 'wechat'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 45 8 ? * MON-FRI'
-            enable: true
+            enable: false
