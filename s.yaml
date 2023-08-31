@@ -72,3 +72,10 @@ services:
             payload: 'xiaiban'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 30 8,13,22 * * *'
             enable: true
+      triggers:
+        - name: rrb
+          type: timer
+          config:    
+            payload: 'rrb'
+            cronExpression: '@every 30m'
+            enable: true
