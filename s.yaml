@@ -64,4 +64,4 @@ services:
           config:    
             payload: 'yuyun'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 7 * * *'
-            enable: false
+            enable: true
