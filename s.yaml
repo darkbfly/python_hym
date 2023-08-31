@@ -65,14 +65,12 @@ services:
             payload: 'yuyun'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 7 * * *'
             enable: true
-      triggers:
         - name: xiaiban
           type: timer
           config:    
             payload: 'xiaiban'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 30 8,13,22 * * *'
             enable: true
-      triggers:
         - name: rrb
           type: timer
           config:    
