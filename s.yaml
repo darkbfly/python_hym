@@ -57,7 +57,7 @@ services:
         memorySize: 128
         timeout: 600
         environmentVariables:
-          # iku_EMAIL: ${env.iku_EMAIL}
+          xiaibang_ck: ${env(xiaibang_ck)}
       triggers:
         - name: yuyun
           type: timer
