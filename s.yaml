@@ -58,6 +58,7 @@ services:
         timeout: 600
         environmentVariables:
           xiaibang_ck: ${env(xiaibang_ck)}
+          mcyp_token: ${env(mcyp_token)}
       triggers:
         - name: yuyun
           type: timer
