@@ -11,7 +11,7 @@ import requests
 import logging
 import time
 import os
-from notify import send
+# from notify import send
 
 # 创建日志记录器
 logger = logging.getLogger(__name__)
@@ -189,4 +189,4 @@ if __name__ == '__main__':
             log_list.append(result['description'])
 
     logger.info("\n============== 推送 ==============")
-    send("名创优品", '\n'.join(log_list))
+    # send("名创优品", '\n'.join(log_list))
