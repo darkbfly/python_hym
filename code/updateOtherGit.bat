@@ -1,7 +1,8 @@
 @echo off
 setlocal
 
-call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/%E5%96%9C%E7%88%B1%E5%B8%AE.py" "xiaiban.py" "xiaiban.py"
+rem call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/%E5%96%9C%E7%88%B1%E5%B8%AE.py" "xiaiban.py" "xiaiban.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/meetclover/JavaScript/main/mcyp.py" "mcyp.py" "mcyp.py"
 exit /b
 
 :DownloadAndRename
@@ -13,7 +14,7 @@ set "url=%~1"
 set "outputPath=%~2"
 set "newName=%~3"
 
-curl -o "%outputPath%" "%url%"
+curl --proxy 127.0.0.1:7890  -o "%outputPath%" "%url%"
 
 if %errorlevel% neq 0 (
     echo œ¬‘ÿ ß∞‹£°

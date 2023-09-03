@@ -77,3 +77,9 @@ services:
             payload: 'rrb'
             cronExpression: '@every 30m'
             enable: true
+        - name: mcyp
+          type: timer
+          config:    
+            payload: 'mcyp'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 6,22 * * *'
+            enable: true
