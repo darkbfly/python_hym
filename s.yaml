@@ -93,4 +93,4 @@ services:
           config:    
             payload: 'tuchong'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 8,23 * * *'
-            enable: true
+            enable: false
