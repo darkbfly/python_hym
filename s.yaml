@@ -65,6 +65,7 @@ services:
           tuchong_ck: ${env(tuchong_ck)}
           ydtoken: ${env(ydtoken)}
           xyyconfig: ${env(xyyconfig)}
+          didi_jifen_token: ${env(didi_jifen_token)}
       triggers:
         - name: yuyun
           type: timer
@@ -108,3 +109,9 @@ services:
             payload: 'xyy'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 0/50 * * * *'
             enable: false
+        - name: didi
+          type: timer
+          config:    
+            payload: 'didi'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 8,10,13,14,15,17 * * *'
+            enable: true
