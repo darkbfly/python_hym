@@ -63,6 +63,7 @@ services:
           xiaibang_ck: ${env(xiaibang_ck)}
           mcyp_token: ${env(mcyp_token)}
           tuchong_ck: ${env(tuchong_ck)}
+          ydtoken: ${env(ydtoken)}
       triggers:
         - name: yuyun
           type: timer
@@ -93,4 +94,10 @@ services:
           config:    
             payload: 'tuchong'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 8,23 * * *'
+            enable: false
+        - name: gb
+          type: timer
+          config:    
+            payload: 'gb'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 35 7-23/1 * * *'
             enable: false
