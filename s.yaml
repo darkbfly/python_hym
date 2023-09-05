@@ -64,6 +64,7 @@ services:
           mcyp_token: ${env(mcyp_token)}
           tuchong_ck: ${env(tuchong_ck)}
           ydtoken: ${env(ydtoken)}
+          xyyconfig: ${env(xyyconfig)}
       triggers:
         - name: yuyun
           type: timer
@@ -100,4 +101,10 @@ services:
           config:    
             payload: 'gb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 35 7-23/1 * * *'
+            enable: false
+        - name: xyy
+          type: timer
+          config:    
+            payload: 'xyy'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0/50 * * * *'
             enable: false
