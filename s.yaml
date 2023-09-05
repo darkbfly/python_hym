@@ -66,6 +66,7 @@ services:
           ydtoken: ${env(ydtoken)}
           xyyconfig: ${env(xyyconfig)}
           didi_jifen_token: ${env(didi_jifen_token)}
+          ksdck: ${env(ksdck)}
       triggers:
         - name: yuyun
           type: timer
@@ -108,4 +109,10 @@ services:
           config:    
             payload: 'didi'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 8,10,13,14,15,17 * * *'
+            enable: true
+        - name: kasadi
+          type: timer
+          config:    
+            payload: 'kasadi'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 8 * * *'
             enable: true
