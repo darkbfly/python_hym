@@ -110,3 +110,9 @@ services:
             payload: 'didi'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 8,10,13,14,15,17 * * *'
             enable: true
+        - name: zj
+          type: timer
+          config:    
+            payload: 'zj'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 12 * * *'
+            enable: true
