@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-rem call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/%E5%96%9C%E7%88%B1%E5%B8%AE.py" "xiaiban.py" "xiaiban.py"
-rem call :DownloadAndRename "https://raw.githubusercontent.com/meetclover/JavaScript/main/mcyp.py" "mcyp.py" "mcyp.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/Ï²°®°ï.py" "xiaiban.py" "xiaiban.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/meetclover/JavaScript/main/mcyp.py" "mcyp.py" "mcyp.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/µÎµÎ.py" "didi.py" "didi.py"
 exit /b
 
