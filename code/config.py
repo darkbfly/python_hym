@@ -30,15 +30,15 @@ async def run_scripts(scripts, max_concurrent):
             await tasks[i - count]
             del tasks[i - count]
         print(f"run script: {script}")
-        name = "python " + script
+        name = script
         tasks.append(run_script(name))
 
     await asyncio.gather(*tasks)
 
 
 async def run_script(name):
-    print(name)
     process = await asyncio.create_subprocess_exec(
+        "python",
         name,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
