@@ -117,3 +117,9 @@ services:
             payload: 'zj'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 12 * * *'
             enable: true
+        - name: config
+          type: timer
+          config:    
+            payload: 'config'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 12 * * *'
+            enable: true
