@@ -6,6 +6,9 @@ call :DownloadAndRename "https://raw.githubusercontent.com/meetclover/JavaScript
 call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/µŒµŒ.py" "didi.py" "didi.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/ø®»¯µ€«©µΩÃ·œ÷.py" "kasadi.py" "kasadi.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/241793/bucai2/main/÷–Ω°365.py" "zj.py" "zj.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/qianmo8/au01/main/gbyd.py" "gb.py" "gb.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/qianmo8/au01/main/xyy.py" "xyy.py" "xyy.py"
+
 exit /b
 
 :DownloadAndRename
