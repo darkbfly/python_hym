@@ -383,7 +383,7 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
         print(xyyconfig)
-        print('请检查你的美添赚脚本变量参数是否填写正确')
+        print('请检查你的小阅阅阅读脚本变量参数是否填写正确')
         exit(0)
     printf = pushconfig['printf']
     appToken = pushconfig['appToken']

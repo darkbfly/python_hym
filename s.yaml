@@ -65,6 +65,7 @@ services:
           tuchong_ck: ${env(tuchong_ck)}
           ydtoken: ${env(ydtoken)}
           xyyconfig: ${env(xyyconfig)}
+          pushconfig: ${env(pushconfig)}
           didi_jifen_token: ${env(didi_jifen_token)}
           ksdck: ${env(ksdck)}
       triggers:
