@@ -47,7 +47,7 @@ mtzconfig = [
     {
         "name": "1",
         "ck": "share:login:283880b7fa7cfd98a76732e6c4b2b3d0",
-        "uids": "UID_51054",
+        "uids": "UID_qknIR6tU7iHKL6LOfGVCElfTorG0",
         "key": "7a0014ef6232534c95f1c53aca6bd7d0",
     },
 ]
