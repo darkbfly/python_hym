@@ -122,5 +122,5 @@ services:
           type: timer
           config:    
             payload: 'config'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 12 * * *'
+            cronExpression: '@every 60m'
             enable: true
