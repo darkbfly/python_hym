@@ -100,11 +100,11 @@ key:每个账号的推送标准，每个账号全阅读只需要一个key,多个
 """
 xkybconfig = [
     {
-        "name": "这里是账号的备注",
-        "un": "星空和元宝的un",
-        "token": "星空和元宝的token",
-        "uids": "要推送到的UID",
-        "key": "上面链接获取key",
+        "name": "1",
+        "un": "oC34q64EKCloeq9n3QLNamwikp9I",
+        "token": "0ccb1471cd06afe8905a1f14419be761",
+        "uids": "UID_qknIR6tU7iHKL6LOfGVCElfTorG0",
+        "key": "7a0014ef6232534c95f1c53aca6bd7d0",
     },
 ]
 ##################################这里填推送平台的token#######################################
