@@ -1,10 +1,11 @@
 import requests
-import config
+import config1 as config
 
-def push(name, link, text, acttype, uids,key):
-    summary = name + ':' + config.dictType.get(acttype)
+
+def push(name, link, text, acttype, uids, key):
+    summary = name + ":" + config.dictType.get(acttype)
     appToken = config.appToken
-    str1 = '''<!DOCTYPE html>
+    str1 = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -28,23 +29,28 @@ def push(name, link, text, acttype, uids,key):
 <p><a href="http://175.24.153.42:8882/lookwxarticle?key=KEY&type=TYPE&wxurl=LINK">点击阅读检测文章</a></p><br>
 </body>
 </html>
-    '''
-    content = str1.replace('LINK', link).replace('TEXT', text).replace('TYPE', acttype).replace('KEY', key)
+    """
+    content = (
+        str1.replace("LINK", link)
+        .replace("TEXT", text)
+        .replace("TYPE", acttype)
+        .replace("KEY", key)
+    )
     datapust = {
         "appToken": appToken,
         "content": content,
         "summary": summary,
         "contentType": 2,
-        "uids": uids.split('|'),
+        "uids": uids.split("|"),
         "url": "https://t.me/bwersgt",
     }
-    urlpust = 'http://wxpusher.zjiecode.com/api/send/message'
+    urlpust = "http://wxpusher.zjiecode.com/api/send/message"
     try:
         p = requests.post(url=urlpust, json=datapust).text
         print(p)
-        print('推送成功')
+        print("推送成功")
         return True
     except Exception as e:
         print(e)
-        print('推送失败！')
+        print("推送失败！")
         return False
