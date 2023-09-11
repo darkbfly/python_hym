@@ -1,15 +1,18 @@
+'''
+cron: 1 1 1 1 1 1
+'''
 import time
 import requests
 import random
 import JhWxPusher
 import getWxInfo
-import config1 as config
+import config
 import threading
 checkDict={
 'MzkzNjI3NDAwOA==':['木新领袋管家','gh_04e096463e91'],
 }
 def getmsg():
-    lvsion = 'v1.1_a'
+    lvsion = 'v1.3_a'
     r=''
     try:
         u='http://175.24.153.42:8881/getmsg'
@@ -88,17 +91,17 @@ class MTZYD():
         r = requests.post(u, headers=self.headers, json={"openid": 0})
         self.printjson(r.text)
         print(self.name,'签到成功')
-    def getMissions(self):
+    def getMissions(self,title):
         ''
         u='http://api.mengmorwpt1.cn/h5_share/daily/getMissions'
         r = requests.post(u, headers=self.headers, json={"openid": 0})
         rj = r.json()
         if rj.get('code')!=200:
-            self.printjson(r.text)
+            print(r.text)
             return False
         info=''
         for i in rj.get('data'):
-            if i.get('title')=='文章阅读推荐':
+            if i.get('title')==title:
                 info=i
                 break
         if info=='':
@@ -200,6 +203,45 @@ class MTZYD():
             return False
         else:
             return True
+    def get_huoke_comment(self):
+        for i in range(1,11):
+            print('-'*30)
+            print('第',i,'轮')
+            u='http://api.mengmorwpt1.cn/h5_share/daily/get_huoke_comment'
+            r = requests.post(u, headers=self.headers, json={"openid": 0})
+            self.printjson(r.text)
+            rj = r.json()
+            if rj.get('code')==200:
+                link=rj.get('data').get('link')
+                task_id = rj.get('data').get('task_id')
+                copyContent=rj.get('data').get('copyContent')
+                is_need_create = rj.get('data').get('is_need_create')
+                if task_id==None or task_id<=10:
+                    print(rj)
+                    print('遇到检测号，或者任务异常,停止任务')
+                    return False
+                if link==None or link=='':
+                    print('获取任务链接失败')
+                    return False
+                print("本次任务的id是", task_id)
+                print("本次任务的链接是",link)
+                print("要发送的私信是", copyContent)
+                print('未知参数',is_need_create)
+                datainfo=dict(rj.get('data'))
+                datainfo.update({'copyContent':'',"openid": 0})
+                ts=random.randint(15, 20)
+                print('本次模拟时间',ts,'秒')
+                time.sleep(ts)
+                self.huoke_comment(datainfo)
+                time.sleep(random.randint(2,3))
+            else:
+                print(self.name,rj.get('message'))
+                return False
+    def huoke_comment(self,data):
+        print(data)
+        u = 'http://api.mengmorwpt1.cn/h5_share/daily/huoke_comment'
+        r = requests.post(u, headers=self.headers, json=data)
+        print('任务结果：',r.text)
     def withdraw(self):
         if self.sy<1000:
             print(self.name,'没有达到提现标准')
@@ -211,10 +253,19 @@ class MTZYD():
         if self.user_info()==False:
             return False
         self.sign()
-        if self.getMissions():
-            self.read_info()
-            self.read()
-            self.user_info()
+        if self.getMissions('文章阅读推荐'):
+            print('开始文章阅读推荐任务')
+            if self.read_info()==False:
+                print('阅读异常请手动参加活动，查看是否异常')
+            else:
+                self.read()
+            time.sleep(2)
+        print('-'*50)
+        time.sleep(2)
+        if self.getMissions('关注发私信'):
+            print('开始关注发私信任务')
+            self.get_huoke_comment()
+        self.user_info()
         self.withdraw()
 if __name__ == '__main__':
     printf = config.printf
