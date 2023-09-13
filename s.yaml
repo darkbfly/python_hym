@@ -91,7 +91,7 @@ services:
           type: timer
           config:    
             payload: 'rrb'
-            cronExpression: '@every 30m'
+            cronExpression: '@every 720m'
             enable: true
         - name: mcyp
           type: timer
