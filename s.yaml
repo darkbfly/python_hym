@@ -69,6 +69,7 @@ services:
           didi_jifen_token: ${env(didi_jifen_token)}
           ksdck: ${env(ksdck)}
           qzqd: ${env(qzqd)}
+          rrb_config: ${env(rrb_config)}
           ysm_uid: ${env(ysm_uid)}
       triggers:
         - name: yuyun
