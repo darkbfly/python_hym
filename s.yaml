@@ -64,7 +64,7 @@ services:
           mcyp_token: ${env(mcyp_token)}
           tuchong_ck: ${env(tuchong_ck)}
           ydtoken: ${env(ydtoken)}
-          xyyconfig: ${env(xyyconfig)}
+          xyy_config: ${env(xyyconfig)}
           pushconfig: ${env(pushconfig)}
           push_config: ${env(push_config)}
           didi_jifen_token: ${env(didi_jifen_token)}
