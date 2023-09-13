@@ -66,10 +66,13 @@ services:
           ydtoken: ${env(ydtoken)}
           xyyconfig: ${env(xyyconfig)}
           pushconfig: ${env(pushconfig)}
+          push_config: ${env(push_config)}
           didi_jifen_token: ${env(didi_jifen_token)}
           ksdck: ${env(ksdck)}
           qzqd: ${env(qzqd)}
           rrb_config: ${env(rrb_config)}
+          zhyd_config: ${env(zhyd_config)}
+          hh_config: ${env(hh_config)}
           ysm_uid: ${env(ysm_uid)}
       triggers:
         - name: yuyun
