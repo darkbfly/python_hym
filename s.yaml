@@ -68,6 +68,7 @@ services:
           pushconfig: ${env(pushconfig)}
           didi_jifen_token: ${env(didi_jifen_token)}
           ksdck: ${env(ksdck)}
+          qzqd: ${env(qzqd)}
           ysm_uid: ${env(ysm_uid)}
       triggers:
         - name: yuyun
