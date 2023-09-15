@@ -74,54 +74,37 @@ services:
           zhyd_config: ${env(zhyd_config)}
           hh_config: ${env(hh_config)}
           ysm_uid: ${env(ysm_uid)}
+          zjck: ${env(zjck)}
       triggers:
-        - name: yuyun
-          type: timer
-          config:    
-            payload: 'yuyun'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 15 7 * * *'
-            enable: true
-        - name: xiaiban
-          type: timer
-          config:    
-            payload: 'xiaiban'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 30 8,13,22 * * *'
-            enable: true
-        - name: rrb
-          type: timer
-          config:    
-            payload: 'rrb'
-            cronExpression: '@every 720m'
-            enable: true
-        - name: mcyp
-          type: timer
-          config:    
-            payload: 'mcyp'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 6,22 * * *'
-            enable: true
-        - name: gb
-          type: timer
-          config:    
-            payload: 'gb'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 35 7-23/1 * * *'
-            enable: false
         - name: xyy
           type: timer
           config:    
             payload: 'xyy'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 0/50 * * * *'
-            enable: false
-        - name: didi
-          type: timer
-          config:    
-            payload: 'didi'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 8,10,13,14,15,17 * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 */30 8-22 * * *'
             enable: true
-        - name: zj
+        - name: xkyd
           type: timer
           config:    
-            payload: 'zj'
-            cronExpression: 'CRON_TZ=Asia/Shanghai 0 5 12 * * *'
+            payload: 'xkyd'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 */30 8-22 * * *'
+            enable: true
+        - name: hhyd
+          type: timer
+          config:    
+            payload: 'hhyd'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 */15 8-22 * * *'
+            enable: true
+        - name: zhyd
+          type: timer
+          config:    
+            payload: 'zhyd'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 */15 8-22 * * *'
+            enable: 
+        - name: mtz
+          type: timer
+          config:    
+            payload: 'mtz'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 0 */30 8-22 * * *'
             enable: true
         - name: config
           type: timer
