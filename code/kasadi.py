@@ -1,6 +1,6 @@
 import json, requests
 import time, os, sys
-# from notify import send
+from notify import send
 '''''
 new Env("卡萨帝签到提现")
 7.12/v1.2  优化部分问题

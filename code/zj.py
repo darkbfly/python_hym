@@ -10,7 +10,7 @@ cron 0 12 * * *
 v1.3 修复报错
 '''
 
-notify = False#关闭通知为False
+notify = True#关闭通知为False
 
 version = sys.version.split(" ")
 ver = version[0].split(".")
