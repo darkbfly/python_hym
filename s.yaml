@@ -75,6 +75,7 @@ services:
           hh_config: ${env(hh_config)}
           ysm_uid: ${env(ysm_uid)}
           zjck: ${env(zjck)}
+          hqcsh: ${env(hqcsh)}
       triggers:
         - name: xyy
           type: timer
