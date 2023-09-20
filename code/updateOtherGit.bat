@@ -8,6 +8,7 @@ call :DownloadAndRename "https://raw.githubusercontent.com/241793/bucai2/main/жа
 call :DownloadAndRename "https://raw.githubusercontent.com/Bidepanlong/ql/main/hqcsh.py" "hqcsh.py" "hqcsh.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/qianmo8/au01/main/zbs.py" "zbs.py" "zbs.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/YourAhTzu/ac/main/angli.py" "angli.py" "angli.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/YourAhTzu/ac/main/qlz.py" "qlz.py" "qlz.py"
 exit /b
 
 :DownloadAndRename

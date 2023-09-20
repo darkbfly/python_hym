@@ -79,6 +79,7 @@ services:
           xk_config: ${env(xk_config)}
           zbstoken: ${env(zbstoken)}
           henshihui: ${env(henshihui)}
+          qlz: ${env(qlz)}
       triggers:
         - name: xyy
           type: timer
