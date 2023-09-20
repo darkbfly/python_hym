@@ -90,19 +90,19 @@ services:
           config:    
             payload: 'xkyd'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 */30 8-22 * * *'
-            enable: true
+            enable: false
         - name: hhyd
           type: timer
           config:    
             payload: 'hhyd'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 */15 8-22 * * *'
-            enable: true
+            enable: false
         - name: zhyd
           type: timer
           config:    
             payload: 'zhyd'
             cronExpression: 'CRON_TZ=Asia/Shanghai 0 */15 8-22 * * *'
-            enable: 
+            enable: false
         - name: mtz
           type: timer
           config:    
