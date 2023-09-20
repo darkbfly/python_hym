@@ -3,7 +3,7 @@ setlocal
 
 call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/œ≤∞Æ∞Ô.py" "xiaiban.py" "xiaiban.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/q7q7q7q7q7q7q7/ziyou/main/µŒµŒ.py" "didi.py" "didi.py"
-call :DownloadAndRename "https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/ø®»¯µ€«©µΩÃ·œ÷.py" "kasadi.py" "kasadi.py"
+call :DownloadAndRename "https://raw.githubusercontent.com/241793/bucai2/main/ksd.py" "kasadi.py" "kasadi.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/241793/bucai2/main/÷–Ω°365.py" "zj.py" "zj.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/Bidepanlong/ql/main/hqcsh.py" "hqcsh.py" "hqcsh.py"
 call :DownloadAndRename "https://raw.githubusercontent.com/qianmo8/au01/main/zbs.py" "zbs.py" "zbs.py"
