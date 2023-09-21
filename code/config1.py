@@ -46,7 +46,7 @@ ck:账号的ck,抓包的任意接口headers中的Authorization参数
 mtzconfig = [
     {
         "name": "1",
-        "ck": "share:login:ab705468177d8ec0830eb8113df7bdf2",
+        "ck": "share:login:7b049bac8eca80b33b6c774452451f23",
         "uids": "UID_qknIR6tU7iHKL6LOfGVCElfTorG0",
         "key": "7a0014ef6232534c95f1c53aca6bd7d0",
     },
