@@ -1,8 +1,8 @@
-'''
+"""
 @阿慈 仅供学习交流，请在下载后的24小时内完全删除 请勿将任何内容用于商业或非法目的，否则后果自负。
 corn：10 10 * * 
 new Env('巧乐兹'); 
-'''
+"""
 import os
 import requests
 import time
@@ -10,6 +10,7 @@ import time
 accessToken = os.getenv("qlz")
 
 share_count = 0  # 已分享次数
+
 
 def signin():
     print("开始执行签到")
@@ -32,6 +33,7 @@ def signin():
             print("已签到")
     except Exception as e:
         print(f"签到出现异常: {e}")
+
 
 def share():
     global share_count
@@ -70,6 +72,8 @@ def main():
             is_signed = True  # 只在第一次签到时打印信息
         share()
         if share_count >= 10:
+            return
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
